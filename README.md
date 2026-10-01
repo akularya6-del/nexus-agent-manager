@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# nexus-agent-manager
 
-First, run the development server:
+**A multi-model AI debate orchestration engine and dashboard. Coordinates Claude, ChatGPT, Gemini, Perplexity, DeepSeek, Groq, and Mistral in parallel structured rounds.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-Browser_Automation-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+
+</div>
+
+---
+
+## 📌 Overview
+
+**nexus-agent-manager** is an orchestration workspace that runs multiple leading AI foundation models in parallel structured debate sessions to surface deep insights, cross-validate hypotheses, and synthesize objective consensus.
+
+Rather than relying on restricted API quotas or differing API model behaviors, Nexus utilizes headless/headful browser session coordination (Playwright) to interact directly with native model interfaces using your active browser sessions.
+
+---
+
+## 🔄 The Debate Lifecycle
+
+```
+User Prompt
+     │
+     ▼
+[Round 1: Fan-Out] ──► Broadcast question to all active models concurrently
+     │
+     ▼
+[Round 2: Cross-Critique] ──► Feed Model A's response into Model B for rigorous challenge
+     │
+     ▼
+[Round 3: Go Deep] ──► Target core contentions, assumptions, and edge cases
+     │
+     ▼
+[Round 4: Synthesis] ──► Head model generates a balanced, evidence-backed final report
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Multi-Model Support**: Integrated adapters for ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Grok, and Mistral.
+- **Structured Multi-Round Protocols**: Fan-Out, Cross-Examination, Red Teaming, and Final Synthesis.
+- **Zero API Key Overhead**: Uses persistent local browser profiles so logins and subscriptions are preserved without per-token billing.
+- **Interactive Dashboard**: Modern Next.js interface with real-time streaming, debate transcript logs, and exportable reports.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Quickstart
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js 18+
+- Chromium for Playwright (`npx playwright install chromium`)
 
-## Deploy on Vercel
+### Installation & Run
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/akularya6-del/nexus-agent-manager.git
+   cd nexus-agent-manager
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   npx playwright install chromium
+   ```
+
+3. **Start development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the application**:
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE).
